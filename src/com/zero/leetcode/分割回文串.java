@@ -61,7 +61,7 @@ public class 分割回文串 {
 
     public static void main(String[] args) {
         分割回文串 分割回文串 = new 分割回文串();
-        分割回文串.partition("aab");
+        分割回文串.partition("aaa");
 
     }
 
