@@ -21,7 +21,7 @@ package com.zero.leetcode;
  */
 public class 左叶子之和 {
 
-    public class TreeNode {
+    private class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
