@@ -34,16 +34,25 @@ public class 两两交换链表中的节点 {
             return head;
         }
 
-        // Nodes to be swapped
-        ListNode firstNode = head;
-        ListNode secondNode = head.next;
+        ListNode headNode = new ListNode(0);
 
-        // Swapping
-        firstNode.next  = swapPairs(secondNode.next);
-        secondNode.next = firstNode;
+        headNode.next = head;
 
-        // Now the head is the second node
-        return secondNode;
+        ListNode temp = headNode;
+
+        while (temp.next != null && temp.next.next != null) {
+            ListNode cur = temp;
+            ListNode one = cur.next;
+            ListNode two = cur.next.next;
+
+            one.next = two.next;
+            two.next = cur.next;
+            cur.next = two;
+
+            temp = one;
+        }
+
+        return headNode.next;
 
     }
 }
