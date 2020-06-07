@@ -1,8 +1,6 @@
 package com.zero.leetcode;
 
-import org.junit.Test;
 
-import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
