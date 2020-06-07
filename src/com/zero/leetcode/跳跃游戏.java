@@ -43,10 +43,4 @@ public class 跳跃游戏 {
     }
 
 
-
-    public static void main(String[] args) {
-        跳跃游戏 跳跃游戏 = new 跳跃游戏();
-        跳跃游戏.canJump(new int[]{3, 2, 1, 0, 4});
-    }
-
 }
