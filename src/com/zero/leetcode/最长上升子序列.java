@@ -1,5 +1,7 @@
 package com.zero.leetcode;
 
+import java.util.Arrays;
+
 /**
  * @Auther: wdd
  * @Date: 2020-04-11 18:05
@@ -23,7 +25,23 @@ public class 最长上升子序列 {
 
     public int lengthOfLIS(int[] nums) {
 
-        return 0;
+        // dp[i]即代表nums[i]位置最长的长度, 默认为1
+        int[] dp = new int[nums.length];
+        Arrays.fill(dp, 1);
+
+        for (int i = 0; i < dp.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (nums[i] > nums[j]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+        }
+
+        int res = 0;
+        for (int i = 0; i < dp.length; i++) {
+            res = Math.max(res, dp[i]);
+        }
+        return res;
     }
 
     public static void main(String[] args) {
