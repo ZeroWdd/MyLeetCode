@@ -18,7 +18,7 @@ package com.zero.leetcode;
  */
 public class 分隔链表 {
 
-    public class ListNode {
+    private class ListNode {
         int val;
         ListNode next;
 
